@@ -49,7 +49,7 @@ local M = {}
 
 function M.catch_ltex()
     log.trace("catch_ltex")
-    local buf_clients = vim.lsp.get_client({
+    local buf_clients = vim.lsp.get_active_clients({
         bufnr = vim.api.nvim_get_current_buf(),
         name = "ltex",
     })
